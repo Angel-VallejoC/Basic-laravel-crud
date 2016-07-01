@@ -62,7 +62,7 @@ class StudentController extends Controller
     {
     	$student = Student::findOrFail($id);
     	$student->delete();
-    	return view('student.index');
+    	return redirect()->route('students.index');
     }
 
 }
