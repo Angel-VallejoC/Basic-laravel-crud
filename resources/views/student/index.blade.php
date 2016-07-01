@@ -3,7 +3,7 @@
 @section('title', 'Students list')
 
 @section('content')
-	<h2>Lista de Alumnos</h2>
+	<h2>Students list</h2>
 	<hr>
 	<div class="students">
 		@if(count($students) > 0)
