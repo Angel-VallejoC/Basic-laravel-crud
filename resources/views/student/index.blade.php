@@ -17,9 +17,9 @@
 				<tbody>
 				@foreach($students as $student)				
 					<tr>
-						<td>{{$student->nombre}}</td>
-						<td>{{$student->apellido}}</td>
-						<td>{{$student->grupo}}</td>												
+						<td>{{$student->name}}</td>
+						<td>{{$student->last_name}}</td>
+						<td>{{$student->grade}}</td>												
 						<td>
 							<a href="{{ route('students.edit', [$student->id]) }}" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span></a>
 							<a href="{{ route('students.delete', [$student->id]) }}" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>			
