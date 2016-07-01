@@ -15,13 +15,14 @@ Route::group(['middleware' => 'web'], function(){
 	Route::get('/', ['uses' => 'StudentController@index', 'as' => 'students.index']);
 
 	Route::get('add', ['uses' => 'StudentController@add', 'as' => 'students.add']);
-	Route::post('add', ['uses' => 'StudentController@save', 'as' => 'students.save']);
+	Route::post('add', ['uses' => 'StudentController@addSave', 'as' => 'students.save']);
 
 	Route::get('edit/{id}', ['uses' => 'StudentController@edit', 'as' => 'students.edit'])
 		->where('id', '[0-9]+');
 	Route::post('edit/{id}', ['uses' => 'StudentController@editSave', 'as' => 'students.edit.save'])
 		->where('id', '[0-9]+');
 
-	Route::get('delete/{id}', ['uses' => 'StudentController@delete', 'as' => 'students.delete']);
+	Route::get('delete/{id}', ['uses' => 'StudentController@delete', 'as' => 'students.delete'])
+		->where('id', '[0-9]+');
 
 });
